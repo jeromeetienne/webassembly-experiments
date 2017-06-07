@@ -37,8 +37,12 @@
         .then(instance => {
                 var exports = instance.exports; // the exports of that instance
                 var doubler = exports._doubler; // the "doubler" function (note "_" prefix)
-                var tripler = exports._tripler
-
+                var fillArray = exports._fillArray
+                var getValue = exports._getValue
+                
+                fillArray()
+                
+                console.log('value', getValue(2))
                 // var typedArray = new Uint32Array(100)
                 // var buf = Module._malloc(typedArray.length*typedArray.BYTES_PER_ELEMENT);
                 // Module.HEAPU8.set(typedArray, buf);
